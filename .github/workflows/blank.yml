@@ -17,7 +17,7 @@ on:
 jobs:
 
   precondition:
-    if: github.ref != 'main'
+    if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
     - name: test
